@@ -1,0 +1,13 @@
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\bin\Debug\netcoreapp3.1\Aufgabe_8.exe
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\bin\Debug\netcoreapp3.1\Aufgabe_8.deps.json
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\bin\Debug\netcoreapp3.1\Aufgabe_8.runtimeconfig.json
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\bin\Debug\netcoreapp3.1\Aufgabe_8.runtimeconfig.dev.json
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\bin\Debug\netcoreapp3.1\Aufgabe_8.dll
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\bin\Debug\netcoreapp3.1\Aufgabe_8.pdb
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\obj\Debug\netcoreapp3.1\Aufgabe_8.csprojAssemblyReference.cache
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\obj\Debug\netcoreapp3.1\Aufgabe_8.AssemblyInfoInputs.cache
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\obj\Debug\netcoreapp3.1\Aufgabe_8.AssemblyInfo.cs
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\obj\Debug\netcoreapp3.1\Aufgabe_8.csproj.CoreCompileInputs.cache
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\obj\Debug\netcoreapp3.1\Aufgabe_8.dll
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\obj\Debug\netcoreapp3.1\Aufgabe_8.pdb
+C:\Users\Matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_8\obj\Debug\netcoreapp3.1\Aufgabe_8.genruntimeconfig.cache
