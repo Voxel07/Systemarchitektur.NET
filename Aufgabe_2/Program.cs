@@ -23,7 +23,7 @@ namespace Aufgabe_2
                 DrawTree(treeHeight, setStar);
             }
         }
-        
+
         private static void DrawTree(int treeHeight, bool star)
         {
             int treeWidth = 1;

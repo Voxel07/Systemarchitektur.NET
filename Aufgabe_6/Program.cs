@@ -27,10 +27,10 @@ namespace Aufgabe_6
                 { 'ß', "SS" }
             };
 
-           return replace.Aggregate(
-                new StringBuilder(),
-                (normalizedString, foundChar) => map.TryGetValue(foundChar, out var replacementChar) ? normalizedString.Append(replacementChar) : normalizedString.Append(foundChar)
-            ).ToString();
+            return replace.Aggregate(
+                 new StringBuilder(),
+                 (normalizedString, foundChar) => map.TryGetValue(foundChar, out var replacementChar) ? normalizedString.Append(replacementChar) : normalizedString.Append(foundChar)
+             ).ToString();
         }
 
         private static string TransformToUpperCase(string transform)
@@ -50,7 +50,7 @@ namespace Aufgabe_6
         private static string HashTheString(string hashed)
         {
             var hashedString = new StringBuilder();
-       
+
             foreach (var t in hashed)
                 if (t >= 'A' && t <= 'Z')
                     hashedString.Append(t <= 77 ? Convert.ToChar(t + 13) : Convert.ToChar(t - 13));

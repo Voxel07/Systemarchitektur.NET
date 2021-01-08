@@ -2,78 +2,105 @@
 
 namespace Aufgabe_9
 {
-    class Program
+    internal class Program
     {
         public static uint guthaben = 100;
-        public static uint land = 0;
+        public static uint land;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
-            printMainMenue();
-            ChooseMainFunction(getAnz());
+            MainMenue();
         }
 
-       static void Landverwalten()
+        #region SpielFunktionen
+        private static void MainMenue()
         {
-            printVerwaltungsMenue();
-            ChooseFunction(getAnz());
+            PrintMainMenue();
+            ChooseMainFunction(GetProgrammNr());
         }
 
-        //Kostet 50
-        static void LandKaufen()
+        private static void Beenden()
         {
-            //Prüfen ob genug Geld da ist
-            Console.WriteLine("Wie vile Ländereien möchten Sie kaufen");
-            uint anz = getAnz();
-            if (Program.guthaben >= 50* anz)
+            Environment.Exit(0);
+        }
+        #endregion
+
+
+        #region Spielerfunktionen
+        private static void Landverwalten()
+        {
+            Console.WriteLine("Guthaben: {0} | Ländereien {1}", guthaben, land);
+            PrintVerwaltungsMenue();
+            ChooseFunction(GetProgrammNr());
+        }
+
+        private static void LandKaufen()
+        {
+            Console.WriteLine("Wie viele Ländereien möchten Sie kaufen");
+            var anz = GetAnz();
+            if (guthaben >= 50 * anz)
             {
-                Program.land++;
-                Program.guthaben -= 50*anz;
+                land += anz;
+                guthaben -= 50 * anz;
             }
+            else
+            {
+                Console.WriteLine("Nicht genung Guthaben um {0} Ländereien zu kaufen", anz);
+            }
+
+            Landverwalten();
         }
 
-        //Bringt 45
-        static void LadVerkaufen()
+        private static void LadVerkaufen()
         {
             //Prüfen ob länderreihen verfügbar sind
             Console.WriteLine("Wie viele Ländereien möchten Sie verkaufen");
-            uint anz = getAnz();
+            var anz = GetAnz();
             if (land >= anz)
             {
-                land++;
-                guthaben -= 45*anz;
+                land -= anz;
+                guthaben += 45 * anz;
             }
-        }
+            else
+            {
+                Console.WriteLine("Sie können {0} Ländereien verkaufen", land);
+            }
 
-        static void UserInteraktion()
-        {
-            Console.WriteLine("");
+            Landverwalten();
         }
+        #endregion
 
-        static uint getAnz()
+        #region UserInteragtionen
+        private static uint GetAnz()
         {
             Console.WriteLine("");
             return Convert.ToUInt16(Console.ReadLine());
         }
 
-        static void printMainMenue()
+        private static uint GetProgrammNr()
+        {
+            Console.WriteLine("");
+            return Convert.ToUInt16(Console.ReadLine());
+        }
+        #endregion
+
+        #region PrintFunktionen
+        private static void PrintMainMenue()
         {
             Console.WriteLine("1. Land verwalten");
             Console.WriteLine("2. Runde beenden");
         }
-        static void printVerwaltungsMenue()
+
+        private static void PrintVerwaltungsMenue()
         {
             Console.WriteLine("1. Land kaufen");
             Console.WriteLine("2. Land verkaufen");
             Console.WriteLine("3. Zurück");
         }
-        static void Beenden()
-        {
-            Environment.Exit(0);
-        }
+        #endregion
 
-        static void ChooseFunction(uint func)
+        #region Menünavigation
+        private static void ChooseFunction(uint func)
         {
             switch (func)
             {
@@ -84,16 +111,16 @@ namespace Aufgabe_9
                     LadVerkaufen();
                     break;
                 case 3:
-                    printMainMenue();
-                    ChooseMainFunction(getAnz());
-
-
-                    break; 
+                    MainMenue();
+                    break;
                 default:
+                    Console.WriteLine("Ungültige Eingabe");
+                    Landverwalten();
                     break;
             }
         }
-        static void ChooseMainFunction(uint func)
+
+        private static void ChooseMainFunction(uint func)
         {
             switch (func)
             {
@@ -102,38 +129,14 @@ namespace Aufgabe_9
                     break;
                 case 2:
                     Beenden();
-                    break; 
+                    break;
                 default:
+                    Console.WriteLine("Ungültige Eingabe");
+                    MainMenue();
                     break;
             }
         }
+        #endregion
+
     }
-
-    class Spiel
-    {
-
-
-
-    };
-
-    class Spieler
-    {
-
-        private
-
-        int guthaben;
-        uint anzLand;
-
-        public
-
-        int getGuthaben()
-        {
-            return guthaben;
-        }
-    };
 }
-    
-    
-    
-   
-

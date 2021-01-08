@@ -25,7 +25,7 @@ namespace Aufgabe_3
             }
         }
     }
-   
+
     public static class RZ
     {
         public static int[] ConvertStringToIntArray(string userInput)
