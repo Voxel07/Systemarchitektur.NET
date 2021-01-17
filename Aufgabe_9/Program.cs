@@ -21,6 +21,7 @@ namespace Aufgabe_9
 
         private static void Beenden()
         {
+			//ausgelagert für zukünftige Erweiterungen
             Environment.Exit(0);
         }
         #endregion
@@ -51,9 +52,8 @@ namespace Aufgabe_9
             Landverwalten();
         }
 
-        private static void LadVerkaufen()
+        private static void LandVerkaufen()
         {
-            //Prüfen ob länderreihen verfügbar sind
             Console.WriteLine("Wie viele Ländereien möchten Sie verkaufen");
             var anz = GetAnz();
             if (land >= anz)
@@ -73,12 +73,14 @@ namespace Aufgabe_9
         #region UserInteragtionen
         private static uint GetAnz()
         {
+			//ausgelagert für zukünftige Erweiterungen / Limitierungen
             Console.WriteLine("");
             return Convert.ToUInt16(Console.ReadLine());
         }
 
         private static uint GetProgrammNr()
         {
+			//ausgelagert für zukünftige Erweiterungen / Limitierungen
             Console.WriteLine("");
             return Convert.ToUInt16(Console.ReadLine());
         }
@@ -108,7 +110,7 @@ namespace Aufgabe_9
                     LandKaufen();
                     break;
                 case 2:
-                    LadVerkaufen();
+                    LandVerkaufen();
                     break;
                 case 3:
                     MainMenue();

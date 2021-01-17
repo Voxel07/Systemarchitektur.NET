@@ -1,0 +1,13 @@
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\obj\Debug\netcoreapp3.1\Aufgabe_11.csprojAssemblyReference.cache
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\obj\Debug\netcoreapp3.1\Aufgabe_11.AssemblyInfoInputs.cache
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\obj\Debug\netcoreapp3.1\Aufgabe_11.AssemblyInfo.cs
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\obj\Debug\netcoreapp3.1\Aufgabe_11.csproj.CoreCompileInputs.cache
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\bin\Debug\netcoreapp3.1\Aufgabe_11.exe
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\bin\Debug\netcoreapp3.1\Aufgabe_11.deps.json
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\bin\Debug\netcoreapp3.1\Aufgabe_11.runtimeconfig.json
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\bin\Debug\netcoreapp3.1\Aufgabe_11.runtimeconfig.dev.json
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\bin\Debug\netcoreapp3.1\Aufgabe_11.dll
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\bin\Debug\netcoreapp3.1\Aufgabe_11.pdb
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\obj\Debug\netcoreapp3.1\Aufgabe_11.dll
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\obj\Debug\netcoreapp3.1\Aufgabe_11.pdb
+C:\Users\matze\OneDrive - bwedu\Programmieren\Systemarchitekturen mit .Net\Systemarchitekturen\Aufgabe_11\obj\Debug\netcoreapp3.1\Aufgabe_11.genruntimeconfig.cache

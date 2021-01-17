@@ -7,7 +7,7 @@ namespace Aufgabe_10
         public static void Hauptmenue(Spieler s)
         {
             Ui.PrintSpieler(s);
-            Ui.PrintMainMenue();
+            Ui.PrintHauptMenue();
             ChooseMainFunction(s, Ui.GetFunctionNr());
         }
         public static void ChooseMainFunction(Spieler s, uint func)

@@ -6,7 +6,6 @@
         {
             Spieler s = new Spieler();
 
-            Getreide.KaufPreis = 20;
             while (true)
             {
                 Spiel.Hauptmenue(s);

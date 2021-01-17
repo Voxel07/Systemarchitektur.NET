@@ -46,7 +46,6 @@
             }
 
             LandVerwalten(this);
-            //Spiel.Hauptmenue(this);
         }
 
         public void GetreideKaufen(uint anz)
@@ -62,7 +61,6 @@
             }
 
             GetreideVerwalten(this);
-            //Spiel.Hauptmenue(this);
         }
 
         //Verkaufen
@@ -79,7 +77,6 @@
             }
 
             LandVerwalten(this);
-            // Spiel.Hauptmenue(this);
         }
 
         public void GetreideVerkaufen(uint anz)
@@ -95,7 +92,11 @@
             }
 
             GetreideVerwalten(this);
-            //Spiel.Hauptmenue(this);
+        }
+       
+        public override string ToString()
+        {
+            return "Guthaben: "+Guthaben+" | Ländereien: "+AnzLaendereien+" | Getreide: "+AnzGetreide;
         }
     }
 }

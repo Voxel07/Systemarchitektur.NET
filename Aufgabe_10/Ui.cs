@@ -6,7 +6,7 @@ namespace Aufgabe_10
     {
         public static void PrintSpieler(Spieler s)
         {
-            Console.WriteLine(s.ToString()+"\n");
+            Console.WriteLine(s+"\n");
         }
 
         public static void PrintGetreiede(Spieler s)
@@ -37,8 +37,8 @@ namespace Aufgabe_10
             test += $"{"Verkaufspreis",16}";
             test += $"{"Guthaben",11}";
             test += "\n";
-            test += $"{"Getreide",0}";
-            test += $"{s.AnzLaendereien,10}";
+            test += $"{"Land",0}";
+            test += $"{s.AnzLaendereien,14}";
             test += $"{Land.KaufPreis,12}";
             test += $"{Land.VerkaufPreis,16}";
             test += $"{s.Guthaben,11}";
@@ -47,7 +47,7 @@ namespace Aufgabe_10
 
         }
 
-        public static void PrintMainMenue()
+        public static void PrintHauptMenue()
         {
             Console.WriteLine("1. Land verwalten");
             Console.WriteLine("2. Markt besuchen");
