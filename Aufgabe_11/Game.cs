@@ -20,7 +20,7 @@ namespace Aufgabe_11
                     VisitMarket(p);
                     break;
                 case 3:
-                    Beenden();
+                    Exit();
                     break;
                 default:
                     Ui.PrintError("Ungültige Eingabe");
@@ -29,12 +29,9 @@ namespace Aufgabe_11
             }
         }
 
-        
-
         public static void ChooseLandFunction(Player p, uint func)
         {
-            Land l = new Land(); //Das muss anders gehen 
-
+            
             switch (func)
             {
                 case 1:
@@ -57,45 +54,42 @@ namespace Aufgabe_11
             }
         }
 
-        //public static void ChooseGetreideFunction(Player p, uint func)
-        //{
-        //    Grain g = new Grain();//Das muss anders gehen 
-        //    switch (func)
-        //    {
-        //        case 1:
-        //            Ui.PrintCntPromt();
-        //            p.BuyGrain(Ui.GetCnt());
-        //            GetreideVerwalten(p);
-        //            break;
-        //        case 2:
-        //            Ui.PrintCntPromt();
-        //            p.SellGrain(Ui.GetCnt());
-        //            GetreideVerwalten(p);
-        //            break;
-        //        case 3:
-        //            MainMenue(p);
-        //            break;
-        //        default:
-        //            Ui.PrintError("Ungültige Eingabe");
-        //            GetreideVerwalten(p);
-        //            break;
-        //    }
-        //}
-
+        public static void ChooseBuySell(Player p,Goods g, uint func)
+        {
+            switch (func)
+            { 
+                case 1: Ui.PrintCntPromt(); 
+                    p.Buy(g, Ui.GetCnt());
+                    break;
+                case 2: Ui.PrintCntPromt();
+                    p.Sell(g,Ui.GetCnt());
+                    break;
+                case 3: VisitMarket(p);
+                    break;
+                default: Ui.PrintError("Ungültige Eingabe");
+                         VisitMarket(p);
+                    break;
+            }
+        }
+        
         public static void LandAdministration(Player p)
         {
             Ui.PrintLand(p);
             Ui.PrintLandAdministration();
-            Game.ChooseLandFunction(p, Ui.GetFunctionNr());
+            ChooseLandFunction(p, Ui.GetFunctionNr());
         }
 
         public static void VisitMarket(Player p)
         {
+          
             Ui.PrintMarketAdministration();
-            Market.ChoseMarketFunction(p, Ui.GetFunctionNr());
+            Goods g = Market.ChoseMarketFunction(p, Ui.GetFunctionNr());
+            Ui.PrintBuySellOption();
+            ChooseBuySell(p, g, Ui.GetCnt());
+
         }
 
-        public static void Beenden()
+        public static void Exit()
         {
             Environment.Exit(0);
         }

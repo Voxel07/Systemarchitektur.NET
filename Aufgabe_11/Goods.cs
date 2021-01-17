@@ -9,7 +9,7 @@ namespace Aufgabe_11
         public uint PurchasePrice;
         public uint SellingPrice;
 
-        public  virtual string Print()
+        public virtual string Print()
         {
             return "default";
         }
