@@ -2,7 +2,7 @@
 
 namespace Aufgabe_11
 {
-    class Ui
+    internal class Ui
     {
         public static void PrintPlayer(Player p)
         {
@@ -14,10 +14,10 @@ namespace Aufgabe_11
             string goodsStr = $"{"KaufPreis",20} {"Verkaufspreis",16} {"Vorrat",10}{"Guthaben",11}\n";
             goodsStr += g.Print(); //Kauf & Verkaufspreis 
 
-            if     (g is Grain)   goodsStr += $"{p.CntGrain,12}";
-            else if(g is Metal)   goodsStr += $"{p.CntMetal,12}";
-            else if(g is Crystal) goodsStr += $"{p.CntCrystal,12}";
-            else if(g is Oil)     goodsStr += $"{p.CntOil,12}";
+            if (g is Grain) goodsStr += $"{p.CntGrain,12}";
+            else if (g is Metal) goodsStr += $"{p.CntMetal,12}";
+            else if (g is Crystal) goodsStr += $"{p.CntCrystal,12}";
+            else if (g is Oil) goodsStr += $"{p.CntOil,12}";
             else Console.WriteLine("passt nicht ");
 
             goodsStr += $"{p.Credit,11}";
@@ -45,7 +45,7 @@ namespace Aufgabe_11
             Console.WriteLine("3. Zurück");
         }
 
-        public static void PrintMarketAdministration()
+        public static void PrintGoods()
         {
             Console.WriteLine("\nMit was möchtest du Handeln ?");
             Console.WriteLine("1. Getreide");
@@ -61,7 +61,7 @@ namespace Aufgabe_11
             Console.WriteLine("2. Verkaufen");
             Console.WriteLine("3. Zurück");
         }
-       
+
 
         public static void PrintCntPromt()
         {
@@ -72,12 +72,13 @@ namespace Aufgabe_11
         {
             return Convert.ToUInt16(Console.ReadLine());
         }
+
         public static uint GetCnt()
         {
             return Convert.ToUInt16(Console.ReadLine());
         }
 
-        public static void PrintError(String str)
+        public static void PrintError(string str)
         {
             Console.WriteLine(str);
         }

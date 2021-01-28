@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Aufgabe_11
+﻿namespace Aufgabe_11
 {
-    class Metal : Goods
+    internal class Metal : Goods
     {
-        public static uint PurchasePrice = 60;
-        public static uint SellingPrice = 54;
+        public new static uint PurchasePrice = 60;
+        public new static uint SellingPrice = 54;
 
         public override string Print()
         {

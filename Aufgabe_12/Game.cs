@@ -1,11 +1,12 @@
 ﻿using System;
 
-namespace Aufgabe_11
+namespace Aufgabe_12
 {
     internal class Game
     {
         public static void MainMenue(Player p)
         {
+            Console.Clear();
             Ui.PrintPlayer(p);
             Ui.PrintMainMenue();
             ChooseMainFunction(p, Ui.GetFunctionNr());
@@ -36,13 +37,17 @@ namespace Aufgabe_11
             switch (func)
             {
                 case 1:
-                    Ui.PrintCntPromt();
-                    p.BuyLand(Ui.GetCnt());
+                    Ui.PrintCountPromt();
+                    if (!Land.Buy(p,Ui.GetCount()))
+                        Ui.PrintError("Nicht genügend Geld");
+
                     LandAdministration(p);
                     break;
                 case 2:
-                    Ui.PrintCntPromt();
-                    p.SellLand(Ui.GetCnt());
+                    Ui.PrintCountPromt();
+                    if(!Land.Sell(p,Ui.GetCount()))
+                        Ui.PrintError("Mehr verkaufen als haben ist nicht");
+
                     LandAdministration(p);
                     break;
                 case 3:
@@ -57,15 +62,24 @@ namespace Aufgabe_11
 
         public static void ChooseBuySell(Player p, Goods g, uint func)
         {
+            uint anz;
             switch (func)
             {
                 case 1:
-                    Ui.PrintCntPromt();
-                    p.Buy(g, Ui.GetCnt());
+                    Ui.PrintCountPromt();
+                    anz = Ui.GetCount();
+                    if (Market.Buy(g, p, anz))
+                        p.IncCount(g, anz);
+                    else
+                        Ui.PrintError("Nicht genügend Geld");
                     break;
                 case 2:
-                    Ui.PrintCntPromt();
-                    p.Sell(g, Ui.GetCnt());
+                    Ui.PrintCountPromt();
+                    anz = Ui.GetCount();
+                    if (Market.Sell(g, p, anz))
+                        p.DecCount(g, anz);
+                    else
+                        Ui.PrintError("Mehr verkaufen als haben ist nicht");
                     break;
                 case 3:
                     VisitMarket(p);
@@ -88,7 +102,7 @@ namespace Aufgabe_11
         {
             Ui.PrintPlayer(p);
             Ui.PrintGoods();
-            var g = Market.ChoseMarketGoods(p, Ui.GetFunctionNr());
+            Goods g = Market.ChoseMarketGoods(p, Ui.GetFunctionNr());
             Ui.PrintBuySellOption();
             ChooseBuySell(p, g, Ui.GetFunctionNr());
             VisitMarket(p);

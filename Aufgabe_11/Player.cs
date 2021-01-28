@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Aufgabe_11
+﻿namespace Aufgabe_11
 {
-    class Player
+    internal class Player
     {
-        //Variablen
-        public uint Credit { get; private set; }
-        public uint CntLands { get; private set; }
-        public uint CntGrain { get; private set; }
-        public uint CntOil { get; private set; }
-        public uint CntMetal { get; private set; }
-        public uint CntCrystal { get; private set; }
-
         //Construktoren
         public Player()
         {
@@ -25,22 +13,31 @@ namespace Aufgabe_11
             CntCrystal = 0;
         }
 
+        //Variablen
+        public uint Credit { get; private set; }
+        public uint CntLands { get; private set; }
+        public uint CntGrain { get; private set; }
+        public uint CntOil { get; private set; }
+        public uint CntMetal { get; private set; }
+        public uint CntCrystal { get; private set; }
+
         //Methoden
 
         //Neu 
-        public void Buy (Goods g, uint anz)
+        public void Buy(Goods g, uint anz)
         {
             uint price = Market.getGoodPurchasePrice(g);
             if (anz * price <= Credit)
             {
                 Credit -= anz * price;
-                IncCnt(g,anz);
+                IncCnt(g, anz);
             }
             else
             {
                 Ui.PrintError("Du hast nicht genügend Geld");
             }
         }
+
         public void Sell(Goods g, uint anz)
         {
             uint price = Market.getGoodSellingPrice(g);
@@ -94,10 +91,11 @@ namespace Aufgabe_11
         public void IncCnt(Goods g, uint anz)
         {
             if (g is Grain) CntGrain += anz;
-            if (g is Metal) CntMetal += anz; 
-            if (g is Crystal) CntCrystal += anz; 
-            if (g is Oil) CntOil += anz; 
+            if (g is Metal) CntMetal += anz;
+            if (g is Crystal) CntCrystal += anz;
+            if (g is Oil) CntOil += anz;
         }
+
         public void DecCnt(Goods g, uint anz)
         {
             if (g is Grain) CntGrain -= anz;
@@ -109,9 +107,8 @@ namespace Aufgabe_11
 
         public override string ToString()
         {
-            return "Guthaben: " + Credit + " | Ländereien: " + CntLands + " | Getreide: " + CntGrain 
+            return "Guthaben: " + Credit + " | Ländereien: " + CntLands + " | Getreide: " + CntGrain
                    + " | Kristall: " + CntCrystal + " | Metall: " + CntMetal + " | Öl: " + CntOil;
         }
     }
 }
-

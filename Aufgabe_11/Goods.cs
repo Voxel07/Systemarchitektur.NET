@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Aufgabe_11
+﻿namespace Aufgabe_11
 {
-    class Goods
+    internal class Goods
     {
         public uint PurchasePrice;
         public uint SellingPrice;
