@@ -60,10 +60,10 @@
         {
             uint price = GetGoodPurchasePrice(g);
             uint amount = count * price;
+
             if (amount > p.Credit) return false;
             p.DecCredit(amount);
             return true;
-
         }
 
         public static bool Sell(Goods g, Player p, uint count)
@@ -75,7 +75,6 @@
             if (count > goodsCount) return false;
             p.IncCredit(amount);
             return true;
-
         }
     }
 }

@@ -4,6 +4,5 @@
     {
         public new static uint PurchasePrice = 25;
         public new static uint SellingPrice = 22;
-
     }
 }

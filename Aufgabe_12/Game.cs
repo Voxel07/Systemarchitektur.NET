@@ -38,16 +38,14 @@ namespace Aufgabe_12
             {
                 case 1:
                     Ui.PrintCountPromt();
-                    if (!Land.Buy(p,Ui.GetCount()))
+                    if (!Land.Buy(p, Ui.GetCount()))
                         Ui.PrintError("Nicht genügend Geld");
-
                     LandAdministration(p);
                     break;
                 case 2:
                     Ui.PrintCountPromt();
-                    if(!Land.Sell(p,Ui.GetCount()))
+                    if (!Land.Sell(p, Ui.GetCount()))
                         Ui.PrintError("Mehr verkaufen als haben ist nicht");
-
                     LandAdministration(p);
                     break;
                 case 3:

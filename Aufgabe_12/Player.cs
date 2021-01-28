@@ -4,7 +4,6 @@ namespace Aufgabe_12
 {
     internal class Player
     {
-        //Construktoren
         public Player()
         {
             Credit = 100;
@@ -37,52 +36,52 @@ namespace Aufgabe_12
             };
         }
 
-        public void IncCount(Goods g, uint anz)
+        public void IncCount(Goods g, uint count)
         {
             switch (g)
             {
                 case Grain _:
-                    CountGrain += anz;
+                    CountGrain += count;
                     break;
                 case Metal _:
-                    CountMetal += anz;
+                    CountMetal += count;
                     break;
                 case Crystal _:
-                    CountCrystal += anz;
+                    CountCrystal += count;
                     break;
                 case Oil _:
-                    CountOil += anz;
+                    CountOil += count;
                     break;
             }
         }
 
-        public void DecCount(Goods g, uint anz)
+        public void DecCount(Goods g, uint count)
         {
             switch (g)
             {
                 case Grain _:
-                    CountGrain -= anz;
+                    CountGrain -= count;
                     break;
                 case Metal _:
-                    CountMetal -= anz;
+                    CountMetal -= count;
                     break;
                 case Crystal _:
-                    CountCrystal -= anz;
+                    CountCrystal -= count;
                     break;
                 case Oil _:
-                    CountOil -= anz;
+                    CountOil -= count;
                     break;
             }
         }
 
-        public void IncCredit(uint ammount)
+        public void IncCredit(uint amount)
         {
-            Credit += ammount;
+            Credit += amount;
         }
 
-        public void DecCredit(uint ammount)
+        public void DecCredit(uint amount)
         {
-            Credit -= ammount;
+            Credit -= amount;
         }
 
 

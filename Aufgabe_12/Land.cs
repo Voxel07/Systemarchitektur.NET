@@ -2,7 +2,6 @@
 {
     internal class Land
     {
-      
         public static uint PurchasePrice = 50;
         public static uint SellingPrice = 45;
 
@@ -12,7 +11,6 @@
             p.DecCredit(count * PurchasePrice);
             p.CountLands += count;
             return true;
-
         }
 
         public static bool Sell(Player p, uint count)
@@ -22,7 +20,5 @@
             p.CountLands -= count;
             return true;
         }
-
-
     }
 }
