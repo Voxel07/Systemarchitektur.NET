@@ -62,6 +62,7 @@
             uint amount = count * price;
 
             if (amount > p.Credit) return false;
+            p.IncCount(g, count);
             p.DecCredit(amount);
             return true;
         }
@@ -73,6 +74,7 @@
             uint amount = count * value;
 
             if (count > goodsCount) return false;
+            p.DecCount(g, count);
             p.IncCredit(amount);
             return true;
         }

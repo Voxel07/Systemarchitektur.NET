@@ -60,23 +60,19 @@ namespace Aufgabe_12
 
         public static void ChooseBuySell(Player p, Goods g, uint func)
         {
-            uint anz;
+            uint count;
             switch (func)
             {
                 case 1:
                     Ui.PrintCountPromt();
-                    anz = Ui.GetCount();
-                    if (Market.Buy(g, p, anz))
-                        p.IncCount(g, anz);
-                    else
+                    count = Ui.GetCount();
+                    if (!Market.Buy(g, p, count))
                         Ui.PrintError("Nicht genügend Geld");
                     break;
                 case 2:
                     Ui.PrintCountPromt();
-                    anz = Ui.GetCount();
-                    if (Market.Sell(g, p, anz))
-                        p.DecCount(g, anz);
-                    else
+                    count = Ui.GetCount();
+                    if (!Market.Sell(g, p, count))
                         Ui.PrintError("Mehr verkaufen als haben ist nicht");
                     break;
                 case 3:
